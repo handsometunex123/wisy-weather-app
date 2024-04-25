@@ -1,0 +1,52 @@
+<div class="bg-primary h-full w-full">
+    <div class="p-4 grid grid-cols-5 gap-12">
+        <div class="flex col-span-2 flex-col text-white pl-8 pr-4 p-4">
+            <div class="flex gap-1pt5 items-center text-white text-lg">
+                <div class="w-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" xml:space="preserve"
+                        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2">
+                        <path
+                            d="M23.634 36.002a2.284 2.284 0 0 0 2.162-1.554 6.098 6.098 0 0 1 5.813-4.214 6.166 6.166 0 0 1 5.842 4.204 2.25 2.25 0 0 0 2.133 1.532c.964.032 1.949.032 1.949.032a6.498 6.498 0 0 1 6.5 6.5v.003a6.501 6.501 0 0 1-6.5 6.499H21.684a6.5 6.5 0 0 1-6.499-6.499v-.003a6.497 6.497 0 0 1 6.499-6.5h1.95z"
+                            style="fill:none;stroke:#fff;stroke-width:1.5px" />
+                        <path
+                            d="M11.864 44.68a6.499 6.499 0 0 1-4.5-6.184v-.003a6.499 6.499 0 0 1 6.499-6.5h3.778a6.163 6.163 0 0 1 6.147-5.768c2.76 0 5.099 1.82 5.88 4.324M37.232 26.996a6.107 6.107 0 0 1 2.98-.771 6.165 6.165 0 0 1 5.842 4.205 2.251 2.251 0 0 0 2.133 1.531c.964.032 1.95.032 1.95.032a6.501 6.501 0 0 1 6.499 6.5v.003a6.499 6.499 0 0 1-6.499 6.5h-2.6"
+                            style="fill:none;stroke:#fff;stroke-width:1.5px" />
+                        <path
+                            d="M38.864 25.996c0-3.312 2.688-6 6-6a6.003 6.003 0 0 1 5.658 8M44.864 14.996v2M52.642 18.217l-1.414 1.415M55.864 25.996h-2M37.085 18.217l1.415 1.415"
+                            style="fill:none;stroke:#fff;stroke-width:1.5px" />
+                    </svg>
+                </div>
+                <span>Weatherapp.</span>
+            </div>
+
+
+            <div class="flex flex-col mt-12 text-2xl font-700 line-height-8 relative">
+                <span>
+                    Weather Forecast
+                </span>
+                <span>Application</span>
+            </div>
+
+            <span class="mt-4 text-base line-height-2">
+                This weather application is a test project requested by Wisy.ai, focusing on weather forecasts for
+                specific locations, namely the District of Columbia and Kansas.
+            </span>
+        </div>
+        <div class="col-span-3 bg-secondary text-white rounded-md p-4 h-full">
+            <div class="flex gap-2 h-full justify-center items-center">
+                <div *ngFor="let weatherForeCastOption of weatherForeCastOptions; let firstWeather = first"
+                    class="flex flex-col justify-center items-center gap-2 pt-8 pb-8 pl-8 pr-0"
+                    [ngClass]="{'pl-0 pr-8 border-right-1': firstWeather}">
+                    <span class="text-lg">{{weatherForeCastOption.weatherText}}</span>
+                    <div (click)="routeToWeatherDetails(weatherForeCastOption)" class="rounded-sm text-white button cursor-pointer bg-button p-2 pl-8 pr-8 text-md max-width-8 text-center">
+                        Proceed
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>

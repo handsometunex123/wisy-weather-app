@@ -1,0 +1,4 @@
+<span class="pl-4 font-700 text-md text-primary underline" *ngIf="show">Temperature Forecast:</span>
+<div class="relative p-4" [hidden]="!show">
+    <canvas [id]="chatId">{{chart}}</canvas>
+</div>

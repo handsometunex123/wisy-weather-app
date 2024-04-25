@@ -1,0 +1,299 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+
+
+  // created this quick helper css classes to model modern css frameworks like tailwind...
+  .flex {
+    display: flex;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .gap-1pt5 {
+    gap: 1.5rem;
+  }
+
+  .gap-2 {
+    gap: 2rem;
+  }
+
+  .gap-5px {
+    gap: 5px;
+  }
+
+  .gap-12 {
+    gap: 12rem;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+  .grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .bg-black-light {
+    background-color: #000;
+    opacity: 0.5;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .top-0 {
+    top: 0;
+  }
+
+  .right-0 {
+    right: 0;
+  }
+
+  .right-8 {
+    right: 0.8rem;
+  }
+
+  .top-76 {
+    top: 7.6rem;
+  }
+
+  .left-0 {
+    left: 0;
+  }
+
+  .h-screen {
+    height: 100vh;
+  }
+
+  .w-screen {
+    width: 100vw;
+  }
+
+  .h-full {
+    height: 100%;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .p-2 {
+    padding: 2rem;
+  }
+
+  .h-half {
+    height: 50%;
+  }
+
+  .w-half {
+    width: 50%;
+  }
+
+  .p-4 {
+    padding: 4rem;
+  }
+
+  .p-1pt5 {
+    padding: 1.5rem;
+  }
+
+  .p-8 {
+    padding: 8rem;
+  }
+
+  .pl-4 {
+    padding-left: 4rem;
+  }
+
+  .pl-8 {
+    padding-left: 8rem;
+  }
+
+  .pt-8 {
+    padding-top: 8rem;
+  }
+
+  .pb-8 {
+    padding-bottom: 8rem;
+  }
+
+  .w-9 {
+    width: 9rem;
+  }
+
+  .h-0 {
+    height: 0;
+  }
+
+  .w-13 {
+    width: 13rem;
+  }
+
+  .w-6 {
+    width: 6rem;
+  }
+
+  .pl-0 {
+    padding-left: 0;
+  }
+
+  .pr-0 {
+    padding-right: 0;
+  }
+
+  .pr-8 {
+    padding-right: 8rem;
+  }
+
+  .pr-4 {
+    padding-right: 4rem;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .text-white {
+    color: #fff;
+  }
+
+  .text-md {
+    font-size: 1.5rem;
+  }
+
+  .text-base {
+    font-size: 1.2rem;
+  }
+
+  .text-lg {
+    font-size: 2rem;
+  }
+
+  .text-xl {
+    font-size: 4rem;
+  }
+
+  .text-2xl {
+    font-size: 8rem;
+  }
+
+  .text-primary {
+    color: #20232a;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .bg-primary {
+    background-color: #20232a;
+  }
+
+  .bg-secondary {
+    background-color: #282b32;
+  }
+
+  .mt-8 {
+    margin-top: 8rem;
+  }
+
+  .mt-4 {
+    margin-top: 4rem;
+  }
+
+  .line-height-8 {
+    line-height: 8rem;
+  }
+
+  .line-height-2 {
+    line-height: 2.5rem;
+  }
+
+  .mt-12 {
+    margin-top: 12rem;
+  }
+
+  .lato {
+    font-family: "Lato", sans-serif;
+  }
+
+  .font-400 {
+    font-weight: 400;
+  }
+
+  .font-700 {
+    font-weight: 700;
+  }
+
+  .rounded-md {
+    border-radius: 4rem;
+  }
+
+  .rounded-sm {
+    border-radius: 1rem;
+  }
+
+  .border-right-1 {
+    border-right: 1px solid #fff;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .bg-button {
+    background-color: #28727d;
+  }
+
+  .max-width-8 {
+    max-width: 8rem;
+  }
+
+  .max-width-16 {
+    max-width: 16rem;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .button {
+    animation: ease-in 2s;
+    &:hover {
+      background-color: #000;
+    }
+  }
+}

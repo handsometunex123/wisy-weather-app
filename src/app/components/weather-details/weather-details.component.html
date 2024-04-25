@@ -1,0 +1,19 @@
+<app-loader [loaderText]="'Loading weather data...'" *ngIf="startLoader && !error"></app-loader>
+
+<div class="flex flex-col p-4 gap-2 text-primary" *ngIf="foreCastProperties">
+    <span class="font-700 text-lg">{{currentWeather}}</span>
+
+    <div class="font-400 text-base flex flex-col gap-5px">
+        <div class="flex">
+            <span class="w-13 font-700">Forecast generated at:</span>
+            <span>{{foreCastProperties.generatedAt | date: 'medium'}}</span>
+        </div>
+        <div class="flex">
+            <span class="w-13 font-700">Forecast updated at:</span>
+            <span>{{foreCastProperties.updateTime | date: 'medium'}}</span>
+        </div>        
+    </div>
+</div>
+<app-line-chart #lineChart [currentWeather]="currentWeather" [show]="foreCastProperties && !startLoader && !error"></app-line-chart>
+
+<app-error-page *ngIf="error && !startLoader" [errorText]="error"></app-error-page>
